@@ -1,10 +1,22 @@
 class SalaAulaTeorica extends Sala {
-	public SalaAulaTeorica(String nome) {
-        super(nome);
+    private boolean possuiProjetor;
+
+    public SalaAulaTeorica(
+            String nome,
+            int capacidade,
+            boolean possuiProjetor) {
+
+        super(nome, capacidade);
+
+        this.possuiProjetor = possuiProjetor;
     }
 
     @Override
     void exibirInfo() {
-        System.out.println("Sala de aula teórica: " + nome);
+        System.out.println(
+                "Sala de aula teórica: " + nome
+                + " | Capacidade: " + capacidade
+                + " | Projetor: " + possuiProjetor
+        );
     }
 }
