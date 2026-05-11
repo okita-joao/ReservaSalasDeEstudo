@@ -1,4 +1,4 @@
-abstract class Sala {
+abstract class Sala extends Subject {
     protected String nome;
     protected int capacidade;
     protected boolean disponivel;
