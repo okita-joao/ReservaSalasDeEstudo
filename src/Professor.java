@@ -1,4 +1,4 @@
-public class Professor implements Observer {
+public class Professor extends Usuario {
     // Atributos da Classe Professor
     private String nome;
     private String idProfessor;
@@ -28,6 +28,7 @@ public class Professor implements Observer {
     // #endregion
 
     // Método do Update do Observer
+    @Override
     public void update(Subject s) {
         if (s instanceof Sala) {
             ((Sala) s).exibirInfo();

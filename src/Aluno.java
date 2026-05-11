@@ -1,6 +1,6 @@
 // Obs.: Criar Atributo para Lista de Salas Interessadas !!! (TALVEZ)
 
-public class Aluno implements Observer {
+public class Aluno extends Usuario {
     // Atributos da Classe Aluno
     private String nome;
     private String RA;
@@ -30,6 +30,7 @@ public class Aluno implements Observer {
     // #endregion
 
     // Método de Update do Observer
+    @Override
     public void update(Subject s) {
         if (s instanceof Sala) {
             ((Sala) s).exibirInfo();
