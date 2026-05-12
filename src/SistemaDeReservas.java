@@ -10,8 +10,10 @@ import java.util.ArrayList;
 public class SistemaDeReservas {
     // Instância Única e centralizada
     private static SistemaDeReservas instance;
-    private int N = 0;
-    private List<Reserva> repositorioReservas = new ArrayList<Reserva>();
+
+    // Atributos relacionados a essa instância única
+    private HistoricoReservas logs = new HistoricoReservas();
+    private ReservasAtivas repositorioReservas = new ReservasAtivas();
 
     private SistemaDeReservas() {
     }
@@ -24,28 +26,30 @@ public class SistemaDeReservas {
     }
 
     // #region Getters e Setters
-    public void setRepositorioReservas(List<Reserva> lista) {
-        this.repositorioReservas = lista;
+    public void setRepositorioReservas(ReservasAtivas R) {
+        this.repositorioReservas = R;
     }
 
-    public List<Reserva> getRepositorioReservas() {
+    public ReservasAtivas getRepositorioReservas() {
         return this.repositorioReservas;
     }
 
-    private void setN(int N) {
-        this.N = N;
+    public void setLogs(HistoricoReservas H) {
+        this.logs = H;
     }
 
-    public int getN() {
-        return this.N;
+    public HistoricoReservas getLogs() {
+        return this.logs;
     }
 
-    public void incrementaN() {
-        int x = this.getN();
-        this.setN(x + 1);
+    public int getNumReservasAtivas() {
+        return this.getRepositorioReservas().getNumReservasAtivas();
+    }
+
+    public int getNumEventosReservas() {
+        return this.getLogs().getNumEventos();
     }
     // #endregion
-
 
     public void cancelaReserva(int idReserva) {
         int inicio = 0;

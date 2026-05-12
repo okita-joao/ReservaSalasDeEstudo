@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class EventoReserva {
+public class EventoReserva extends Subject {
     private Sala sala;
     private Usuario solicitante;
     private LocalDate data;
