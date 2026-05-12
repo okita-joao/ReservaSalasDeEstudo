@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ReservarSala extends Operacao {
+public class ReservarSalaChegouPrimeiro implements Reservar {
     // Método Construtor da Classe
     public ReservarSala(SistemaDeReservas sistema) {
         super(sistema);
