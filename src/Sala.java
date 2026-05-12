@@ -21,11 +21,6 @@ abstract class Sala extends Subject {
         return disponivel;
     }
 
-    public void reservar() {
-        disponivel = false;
-        this.notifyObservers();
-    }
-
     public void liberar() {
         disponivel = true;
         this.notifyObservers();
