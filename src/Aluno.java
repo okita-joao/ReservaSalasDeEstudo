@@ -19,12 +19,4 @@ public class Aluno extends Usuario {
         return this.RA;
     }
     // #endregion
-
-    // Método de Update do Observer
-    @Override
-    public void update(Subject s) {
-        if (s instanceof Sala) {
-            ((Sala) s).exibirInfo();
-        }
-    }
 }

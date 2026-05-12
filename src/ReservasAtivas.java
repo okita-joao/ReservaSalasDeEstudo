@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 public class ReservasAtivas {
     // Atributos da Classe Reservas Ativas
@@ -38,6 +36,9 @@ public class ReservasAtivas {
 
     // Método para remover uma Reserva Ativa
     public void removeReserva(Reserva R) {
+        // Notificar os interessados
+        R.notifyObservers();
+
         this.repositorioReservas.remove(R);
         this.refreshNumReservasAtivas();
     }

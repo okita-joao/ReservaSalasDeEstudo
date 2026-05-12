@@ -78,6 +78,8 @@ public class ReservarSala extends Operacao {
             while (it.hasNext()) {
                 Reserva res = it.next();
                 msgErro = msgErro + res.apresentaReserva();
+
+                res.addObserver(solicitante);
             }
 
             return msgErro;

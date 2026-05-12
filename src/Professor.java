@@ -17,12 +17,4 @@ public class Professor extends Usuario {
         return this.idProfessor;
     }
     // #endregion
-
-    // Método do Update do Observer
-    @Override
-    public void update(Subject s) {
-        if (s instanceof Sala) {
-            ((Sala) s).exibirInfo();
-        }
-    }
 }
