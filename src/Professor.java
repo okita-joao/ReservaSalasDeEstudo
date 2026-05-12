@@ -1,4 +1,4 @@
-public class Professor implements Observer{
+public class Professor implements Observer {
     // Atributos da Classe Professor
     private String nome;
     private String idProfessor;
@@ -29,5 +29,8 @@ public class Professor implements Observer{
 
     // Método do Update do Observer
     public void update(Subject s) {
+        if (s instanceof Sala) {
+            ((Sala) s).exibirInfo();
+        }
     }
 }

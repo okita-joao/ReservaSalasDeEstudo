@@ -1,4 +1,4 @@
-abstract class Sala {
+abstract class Sala extends Subject {
     protected String nome;
     protected int capacidade;
     protected boolean disponivel;
@@ -23,10 +23,12 @@ abstract class Sala {
 
     public void reservar() {
         disponivel = false;
+        this.notifyObservers();
     }
 
     public void liberar() {
         disponivel = true;
+        this.notifyObservers();
     }
 
     abstract void exibirInfo();
