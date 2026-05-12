@@ -1,23 +1,14 @@
 public class Professor extends Usuario {
     // Atributos da Classe Professor
-    private String nome;
     private String idProfessor;
 
     // Método Construtor da Classe Professor
     public Professor(String nome, String idProfessor) {
-        this.setNome(nome);
+        super(nome);
         this.setIdProfessor(idProfessor);
     }
 
     // #region Getters e Setters
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
     public void setIdProfessor(String idProfessor) {
         this.idProfessor = idProfessor;
     }

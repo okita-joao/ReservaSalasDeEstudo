@@ -2,24 +2,15 @@
 
 public class Aluno extends Usuario {
     // Atributos da Classe Aluno
-    private String nome;
     private String RA;
 
     // Método Construtor da Classe Aluno:
     public Aluno(String nome, String RA) {
-        this.setNome(nome);
+        super(nome);
         this.setRA(RA);
     }
 
     // #region Getters e Setters
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
     public void setRA(String RA) {
         this.RA = RA;
     }

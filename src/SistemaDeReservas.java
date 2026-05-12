@@ -23,13 +23,29 @@ public class SistemaDeReservas {
         return instance;
     }
 
-    // Métodos para Reservar uma Sala
-    public void reservarSala(Sala sala, Usuario solicitante, LocalDate data, LocalTime inicio, LocalTime horarioFim) {
-        repositorioReservas.add(new Reserva(sala, solicitante, data, inicio, horarioFim, N));
-        N = N + 1;
-
-        sala.reservar();
+    // #region Getters e Setters
+    public void setRepositorioReservas(List<Reserva> lista) {
+        this.repositorioReservas = lista;
     }
+
+    public List<Reserva> getRepositorioReservas() {
+        return this.repositorioReservas;
+    }
+
+    private void setN(int N) {
+        this.N = N;
+    }
+
+    public int getN() {
+        return this.N;
+    }
+
+    public void incrementaN() {
+        int x = this.getN();
+        this.setN(x + 1);
+    }
+    // #endregion
+
 
     public void cancelaReserva(int idReserva) {
         int inicio = 0;
