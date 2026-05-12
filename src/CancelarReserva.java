@@ -19,8 +19,6 @@ public class CancelarReserva extends Operacao {
         // Se a reserva existe remove-a do repositório de Reservas Ativas do Sistema
         R.removeReserva(res);
 
-        // Notificar os interessados desse horário
-
         return "Cancelamento concluído com sucesso!";
     }
 }
